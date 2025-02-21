@@ -16,7 +16,7 @@ const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.inner
 const container = document.getElementById("threejscanvas");
 
 // Create a WebGL renderer and set its size
-const renderer = new THREE.WebGLRenderer({canvas: container, antialias: true, alpha: true});
+const renderer = new THREE.WebGLRenderer({canvas: container, antialias: true, preserveDrawingBuffer:true, alpha: true});
 renderer.setSize( container.clientWidth, container.clientHeight );
 
 // Set up orbit controls for the camera
