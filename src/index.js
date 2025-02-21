@@ -22,8 +22,6 @@ camera.position.x = 0;
 camera.position.y = 0;
 camera.position.z = 1;
 
-//camera.lookAt(new THREE.Vector3(0,0,0));
-//controls.target.set(0,0.17,0);
 
 
 //controls.enableZoom = false;
@@ -102,6 +100,10 @@ camera.updateProjectionMatrix();
 function animate(time) {
     requestAnimationFrame( animate );
     controls.update();
+
+    if(logo){
+        logo.rotation.y += 0.005;
+    }
 
     renderer.render( scene, camera );
     
