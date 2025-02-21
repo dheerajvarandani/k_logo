@@ -1,0 +1,10 @@
+body {
+
+    background-color: black;
+}
+
+#threejscanvas {
+
+    width: 100vw;
+    height: 100vh;
+}
