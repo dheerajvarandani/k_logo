@@ -91,7 +91,7 @@ function animate(time) {
 
     // Rotate the logo if it exists
     if(logo_grp){
-        logo_grp.rotation.y += 0.005;
+        logo.rotation.y += 0.005;
     }
 
     // Render the scene from the perspective of the camera
