@@ -61,12 +61,28 @@ loader.load(
         logo_grp = logoScene.getObjectByName('k_logo_grp');
         logo = logoScene.getObjectByName('k_logo');
 
+
+        // Load the normal map texture
+        const normalMap = new THREE.TextureLoader().load('./assets/normal.png');
+
+        logo.material.bumpScale = 0.1
+        logo.material.normalScale = new THREE.Vector2(0.02,0.02);
+        logo.material.needsUpdate = true;
+
+        //logo.material.normalMap = normalMap;
         // Make the logo material more metallic
         if (logo) {
             logo.traverse((child) => {
                 if (child.isMesh) {
                     child.material.metalness = 1.0;
                     child.material.roughness = 0.2;
+
+                    console.log(child.material);
+                    
+
+
+
+
                 }
             });
         }
