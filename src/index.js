@@ -63,10 +63,10 @@ loader.load(
 
 
         // Load the normal map texture
-        const normalMap = new THREE.TextureLoader().load('./assets/normal.png');
+        const roughnessMap = new THREE.TextureLoader().load('./assets/grunge.jpg');
 
-        logo.material.bumpScale = 0.1
-        logo.material.normalScale = new THREE.Vector2(0.02,0.02);
+        logo.material.bumpScale = 0
+        logo.material.roughnessMap = roughnessMap;
         logo.material.needsUpdate = true;
 
         //logo.material.normalMap = normalMap;
@@ -75,7 +75,7 @@ loader.load(
             logo.traverse((child) => {
                 if (child.isMesh) {
                     child.material.metalness = 1.0;
-                    child.material.roughness = 0.2;
+                    child.material.roughness = 0.35;
 
                     console.log(child.material);
                     
